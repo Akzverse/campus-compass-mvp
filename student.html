@@ -2,21 +2,32 @@
 <html>
 <head>
   <title>Student Navigation</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #map {
+      height: 300px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <h2>Student Navigation</h2>
 
   <select id="destination">
-    <option>Classroom – Block A, Floor 2</option>
-    <option>Lab – Programming Lab, Floor 1</option>
-    <option>Student Restroom – Block B</option>
+    <option value="blockA">Classroom – Block A, Floor 2</option>
+    <option value="lab">Programming Lab – Floor 1</option>
+    <option value="restroom">Student Restroom – Block B</option>
   </select>
 
   <button onclick="showRoute()">Get Directions</button>
 
+  <div id="map"></div>
+
   <div id="route"></div>
 
-  <script src="js/navigation.js"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?AIzaSyDn9hSOGSTs4uqXMkXLXmcw0WGkJypnh4E"></script>
+<script src="navigation.js"></script>
+  </script>
 </body>
 </html>
